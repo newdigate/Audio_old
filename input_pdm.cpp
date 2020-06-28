@@ -52,7 +52,7 @@
 // but its performance should be *much* better than the rapid passband rolloff
 // of Cascaded Integrator Comb (CIC) or moving average filters.
 
-DMAMEM static uint32_t pdm_buffer[AUDIO_BLOCK_SAMPLES*4];
+DMAMEM __attribute__((aligned(32))) static uint32_t pdm_buffer[AUDIO_BLOCK_SAMPLES*4];
 static uint32_t leftover[14];
 audio_block_t * AudioInputPDM::block_left = NULL;
 bool AudioInputPDM::update_responsibility = false;
@@ -84,12 +84,17 @@ DMAChannel AudioInputPDM::dma(false);
   #define MCLK_MULT 1
   #define MCLK_DIV  17
 #elif F_CPU == 216000000
-  #define MCLK_MULT 8
-  #define MCLK_DIV  153
-  #define MCLK_SRC  0
+  #define MCLK_MULT 12
+  #define MCLK_DIV  17
+  #define MCLK_SRC  1
 #elif F_CPU == 240000000
-  #define MCLK_MULT 4
+  #define MCLK_MULT 2
   #define MCLK_DIV  85
+  #define MCLK_SRC  0
+#elif F_CPU == 256000000
+  #define MCLK_MULT 12
+  #define MCLK_DIV  17
+  #define MCLK_SRC  1
 #elif F_CPU == 16000000
   #define MCLK_MULT 12
   #define MCLK_DIV  17

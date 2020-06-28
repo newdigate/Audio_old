@@ -3,14 +3,19 @@ AudioConnection	KEYWORD2
 AudioInputI2S	KEYWORD2
 AudioInputI2S2	KEYWORD2
 AudioInputI2SQuad	KEYWORD2
+AudioInputI2SHex	KEYWORD2
+AudioInputI2SOct	KEYWORD2
 AudioInputI2Sslave	KEYWORD2
 AudioInputTDM	KEYWORD2
 AudioInputTDM2	KEYWORD2
 AudioInputPDM	KEYWORD2
 AudioInputUSB	KEYWORD2
+AudioInputSPDIF3	KEYWORD2
 AudioOutputI2S	KEYWORD2
 AudioOutputI2S2	KEYWORD2
 AudioOutputI2SQuad	KEYWORD2
+AudioOutputI2SHex	KEYWORD2
+AudioOutputI2SOct	KEYWORD2
 AudioOutputI2Sslave	KEYWORD2
 AudioOutputSPDIF	KEYWORD2
 AudioOutputSPDIF2	KEYWORD2
@@ -54,6 +59,7 @@ AudioEffectMidSide	KEYWORD2
 AudioEffectWaveshaper	KEYWORD2
 AudioEffectGranular	KEYWORD2
 AudioEffectDigitalCombine	KEYWORD2
+AudioEffectRectifier	KEYWORD2
 AudioFilterBiquad	KEYWORD2
 AudioFilterFIR	KEYWORD2
 AudioFilterStateVariable	KEYWORD2
@@ -103,6 +109,7 @@ setHighShelf	KEYWORD2
 muteOutput	KEYWORD2
 unmuteOutput	KEYWORD2
 muteInput	KEYWORD2
+pllLocked	KEYWORD2
 unmuteInput	KEYWORD2
 enableDither	KEYWORD2
 disableDither	KEYWORD2
