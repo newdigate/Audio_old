@@ -1,0 +1,3 @@
+# resampling code moved ...
+
+Just a quick note: I've moved the re-sampling pitch control to its own repo [TeensyVariablePlayback](https://github.com/newdigate/https://github.com/newdigate/teensy-variable-playback)
